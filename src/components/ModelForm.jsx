@@ -56,6 +56,12 @@ function ModelForm() {
         className="flex flex-col items-start justify-center gap-4 h-[400px] w-[500px] bg-blue-100 relative z-20 p-6"
         onSubmit={handleSubmit}
       >
+        {editItem ? (
+          <p className="text-xl text-center">Edit Item</p>
+        ) : (
+          <p className="text-xl text-center">Add Item</p>
+        )}
+
         <label className="text-2xl w-full">Title:</label>
         <input
           type="text"
